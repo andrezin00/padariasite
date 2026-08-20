@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 - Parte 2 - Estruturas Gerais e Links</title>
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <script src="https://kit.fontawesome.com/3f21966000.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="toggle-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="main-menu">
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="mailto:teste@gmail.com?subject=Teste%20CSS3%20-%20Parte%202&body=Essa%20mensagem%20foi%20definida%20automaticamente%20para%20facilitar%20a%20filtragem.%0A%0A">E-mail</a></li>
+                <li><a href="tel:+5532999999999">Telefone</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5532999999999&text=Teste%20CSS3%20-%20Parte%202" target="_blank">WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="titulo">TELA DE PRODUTOS</h1>
+             
+
+        <div id="tudo">
+            <nav id="cards">
+                
+                <div class="card" id="paes"><a href="paes.html"> <img src="assets/imagens/pao.jpg" alt="" height="300px" width="300px"><h1>PÃES</h1></a></div>
+        
+                <div class="card" id="salgados"><a href="salgados.html"><img src="assets/imagens/salgados.jpg" alt="" height="300px" width="300px"><h1>SALGADOS</h1></a></div>
+                         
+                <div class="card" id="bolos"><a href="bolos.html"><img src="assets/imagens/bolos.jpg" alt="" height="300px" width="300px"><h1>BOLOS</h1></a></div>
+                         
+                <div class="card" id="doces"><a href="doces.html"><img src="assets/imagens/doces.jpg" alt="" height="300px" width="300px"><h1>DOCES</h1></a></div>
+                         
+                <div class="card" id="bebidas"><a href="bebidas.html"> <img src="assets/imagens/cafe.jpg" alt="" height="300px" width="300px"><h1>BEBIDAS</h1></a></div>
+           
+            </nav>
+        </div>
+    </main>
+    
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://restaurantguru.com.br/Padaria-Agua-na-Boca-Juiz-de-Fora" target="_blank">Sobre</a></li>
+                <li><a href="termos.html">Termos, Condições e Política de Privacidade</a></li>
+                <h8>Todos os direitos reservados à Padaria Água na Boca</h8>
+
+            </ul>
+        </nav>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29641.39670695719!2d-43.39059884818137!3d-21.773503000898305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b68e6d7afb5%3A0xe93407bd83fcee42!2sPadaria%20e%20Confeitaria%20%C3%81gua%20na%20Boca%20S%C3%A3o%20Mateus!5e0!3m2!1spt-BR!2sbr!4v1787231345535!5m2!1spt-BR!2sbr" width="400" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </footer>
+
+    <div class="modal" id="modaltermos">
+        <iframe src="cadastro.html" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        const mainMenu = document.querySelector('.main-menu');
+        function toggleMenu() {
+            mainMenu.style.visibility == '' ? mainMenu.style.visibility = 'hidden' : undefined;
+
+            if(mainMenu.style.visibility == 'hidden'){
+                mainMenu.style.opacity = '1';
+                mainMenu.style.visibility = 'visible';
+            } else {
+                mainMenu.style.opacity = '0';
+                mainMenu.style.visibility = 'hidden'
+            }
+        }
+
+        window.addEventListener('resize', (e) => {
+            if(mainMenu.style.visibility == 'hidden'){
+                mainMenu.style.opacity = '1';
+                mainMenu.style.visibility = 'visible';
+            }
+        })
+
+       /*  function toggleModal(target) {
+            const modal = document.querySelector(target.getAttribute('modal-target'));
+            modal.classList.toggle("showModal");
+
+            setTimeout(() => {
+                document.addEventListener('click', (e) => {
+                    if (!modal.contains(e.target) && modal.classList.contains("showModal")){
+                        modal.classList.remove("showModal");
+                    }
+                }, { once: true })
+            }, 500)
+        }
+    </script>
+</body>
+</html>

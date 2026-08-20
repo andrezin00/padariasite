@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAdaria Água na Boca</title>
+    <title>Padaria Água na Boca</title>
     <link rel="stylesheet" href="assets/css/cadastro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,47 +12,31 @@
 <body>
     <main class="container">
         <div class="card" id="info-login">
-            <img src="assets/images/logo.webp" alt="Logo Smart Control">
+            <img src="assets/imagens/logo.jpg" alt="Logo Padaria" height="250px" width="250px">
             <h1>Padaria Água na Boca</h1>
             <h2>Cadastro</h2>
         </div>
         <div class="card">
             <form method="post" id="form-login">
+                <p id="titulo">Cadastro</p>
                 <label for="nome_completo">Nome Completo:</label>
                 <input type="text" name="nome_completo" id="nome_completo" placeholder="Digite seu nome completo..." required>
 
                 <label for="cpf">CPF:</label>
                 <input type="text" name="cpf" id="cpf" minlength="14" maxlength="14" title="Ex: 123.456.789-10" inputmode="numeric" pattern="\d{3}.\d{3}.\d{3}-\d{2}" oninput="this.value = this.value.replace(/[^\d.-]/g, '')" placeholder="123.456.789-10" required>
 
-                <label for="cadastro">login:</label>
-                <select name="escolaridade" id="escolaridade" required>
-                    <option value="Email" selected hidden>Informe a sua escolaridade</option>
-                    <option value="">Ensino Fundamental Completo</option>
-                    <option value="">Ensino Médio Completo</option>
-                    <option value="">Ensino Superior Completo</option>
-                </select>
-
-                <p>Informe o seu Sexo:</p>
-                <div class="form-group" id="sexo">
-                    <div class="form-opt">
-                        <input type="radio" name="sexo" id="masculino" value="Masculino" required>
-                        <label for="masculino">Masculino</label>
-                    </div>
-                    <div class="form-opt">
-                        <input type="radio" name="sexo" id="feminino" value="Feminino">
-                        <label for="feminino">Feminino</label>
-                    </div>
-                    <div class="form-opt">
-                        <input type="radio" name="sexo" id="null" value="Prefiro não dizer">
-                        <label for="null">Prefiro não dizer</label>
-                    </div>
-                </div>
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço..." required>
 
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" required  placeholder="Digite seu E-mail..." required>
 
-                <label for="senha_padrao">Senha Padrão:</label>
-                <input type="password" name="senha_padrao" id="senha_padrao" minlength="8" required>
+                <label for="senha">Crie uma Senha:</label>
+                <input type="password" name="senha" id="senha" minlength="8" required  placeholder="Crie sua senha..." required>
+
+                <label for="senha_confirma">Confirme sua Senha:</label>
+                <input type="password" name="senha_confirma" id="senha_confirma" minlength="8" required  placeholder="Confirme sua senha..." required>
+
 
                 <div class="form-group" id="termos-e-condicoes">
                     <div class="form-opt">
@@ -61,7 +45,7 @@
                     </div>
                 </div>
 
-                <input type="submit" value="Enviar Dados">
+                <input type="submit" value="Concluir Cadastro">
             </form>
         </div>
     </main>

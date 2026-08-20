@@ -1,0 +1,158 @@
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f3ed;
+    color: #333;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #7b2d26, #a84432);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #7b2d26;
+    font-size: 25px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e5c7a5;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #8f3b2d;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+ul {
+    margin: 10px 0 20px 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.info-box {
+    background: #fff7ed;
+    border-left: 5px solid #c47a35;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 5px;
+}
+
+.info-box strong {
+    color: #7b2d26;
+}
+
+.data-box {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+footer {
+    background: #542019;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.btn-top {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #d69b55;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn-top:hover {
+    background: #b87d3f;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    header {
+        background: #7b2d26 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .container {
+        box-shadow: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .btn-top {
+        display: none;
+    }
+
+    footer {
+        background: #542019 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+</style>

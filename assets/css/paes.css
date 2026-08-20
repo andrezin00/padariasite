@@ -1,0 +1,6 @@
+body{
+    background: url(../imagens/background.jpg);
+    display: flex;
+    justify-content: center;
+}
+
